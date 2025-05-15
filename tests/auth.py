@@ -18,7 +18,7 @@ def test_standard_users_should_be_able_to_see_products(logged_in_page):
     # Ref: https://playwright.dev/python/docs/actionability
     logged_in_page.locator(LOCATORS_PRODUCTS_PAGE_TITLE).wait_for(state="visible", timeout=5000) # Explicit wait 
     logged_in_page.wait_for_timeout(2000) # Explicit wait for 2 seconds (delay)
-
+    
     expect(logged_in_page.locator(LOCATORS_PRODUCTS_PAGE_TITLE)).to_have_text(CONSTANTS_PRODUCTS_PAGE_TITLE)
     expect(logged_in_page).to_have_url(f"{CONSTANTS_BASE_URL}/inventory.html")
 

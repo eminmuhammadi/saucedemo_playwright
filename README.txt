@@ -6,7 +6,7 @@ $ pip install pytest pytest-html playwright pytest-playwright pytest_tagging
 
 $ playwright install
 
-$ pytest ui_test.py -v --tags auth --browser=chromium --slowmo 500 --headed --html=report.html
+$ pytest tests/auth.py -v --tags JIRA-0001 --browser=chromium --slowmo 500 --headed --html=report.html
 
 [-v]                                - Verbose
 [--tags name]                       - Run specific tags
@@ -17,4 +17,4 @@ $ pytest ui_test.py -v --tags auth --browser=chromium --slowmo 500 --headed --ht
 
 $ playwright show-trace ./traces/XXX/trace-XXX.zip
 
-$ PWDEBUG=1 pytest ui_test.py -v --tags auth --browser=chromium --slowmo 500 --headed --html=report.html
+$ PWDEBUG=1 pytest tests/auth.py -v --tags auth --browser=chromium --slowmo 500 --headed --html=report.html
